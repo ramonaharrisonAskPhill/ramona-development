@@ -55,14 +55,24 @@
   {% endif %}
 
   <header class="site-header{% if section.settings.align_logo == 'left' %} border-bottom logo--left{% else %} logo--center{% endif %}" role="banner">
-    <div class="grid grid--no-gutters grid--table site-header__mobile-nav">
-      {% if section.settings.align_logo == 'center' %}
-        {%- assign logo_classes = 'medium-up--one-third medium-up--push-one-third logo-align--center' -%}
-      {% else %}
-        {%- assign logo_classes = 'medium-up--one-quarter logo-align--left' -%}
-      {% endif %}
+    <div class="grid-header">
+      
+      <div class="grid-header__item">
+        <form action="{{ routes.search_url }}" method="get" class="search-header search" role="search">
+          <input class="search-header__input search__input" type="search" name="q" placeholder="Search" aria-label="Search" autocomplete="off" maxlength="255">
+          <button class="search-header__submit search__submit btn--link" type="submit">
+            
+            <svg class="icon-search" width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-3 -3)" stroke="#000" stroke-width="2" fill="none" fill-rule="evenodd"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.536-3.536" stroke-linecap="round"></path></g></svg>
+        
+          
+            <span class="icon__fallback-text">Submit</span>
+          </button>
+        </form>
+      </div>
+      
+      {%- assign logo_classes = 'medium-up--one-third medium-up--push-one-third logo-align--center' -%}
 
-      <div class="grid__item {{ logo_classes }}">
+      <div class="grid-header__item">
         {% comment %}
           Use the uploaded logo from theme settings if enabled.
           Site name gets precedence with H1 tag on homepage, div on other pages.
@@ -102,13 +112,7 @@
         {% endif %}
       </div>
 
-      {% if section.settings.align_logo == 'left' %}
-        <nav class="grid__item medium-up--one-half small--hide" id="AccessibleNav" role="navigation">
-          {% include 'site-nav', linklist: section.settings.main_linklist %}
-        </nav>
-      {% endif %}
-
-      <div class="grid__item {% if section.settings.align_logo == 'left' %}medium-up--one-quarter{% else %}medium-up--one-third medium-up--push-one-third{% endif %} text-right site-header__icons{% if shop.customer_accounts_enabled %} site-header__icons--plus{% endif %}">
+      <div class="grid-header__item">
         <div class="site-header__icons-wrapper">
 
           <button type="button" class="btn--link site-header__icon site-header__search-toggle js-drawer-open-top" data-predictive-search-open-drawer>
