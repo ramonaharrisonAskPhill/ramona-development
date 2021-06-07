@@ -1,3 +1,24 @@
+.btn {
+    transition: all .3s ease-out !important;
+}
+
+.btn:hover {
+    background-color: #c6c6c6 !important;
+    color: #000 !important;
+}
+
+.btn--outline {
+    background-color: #fff !important;
+    color: #000 !important;
+    border: 2px solid #c6c6c6 !important;
+}
+
+.btn--outline:hover {
+    background-color: #c6c6c6 !important;
+    color: #000 !important;
+    border: 2px solid transparent !important;
+}
+
 .site-footer__content {
     align-items: stretch !important;
 }
