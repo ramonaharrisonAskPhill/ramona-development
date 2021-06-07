@@ -18,11 +18,13 @@
   {%- assign base_font_bold_italic = base_font_bold | font_modify: 'style', 'italic' -%}
 
   <link rel="preload" href="{{ 'theme.css' | asset_url }}" as="style">
+  {{ 'custom-styles.css' | asset_url | stylesheet_tag }}
   <link rel="preload" as="font" href="{{ header_font | font_url }}" type="font/woff2" crossorigin>
   <link rel="preload" as="font" href="{{ base_font | font_url }}" type="font/woff2" crossorigin>
   <link rel="preload" as="font" href="{{ base_font_bold | font_url }}" type="font/woff2" crossorigin>
   <link rel="preload" href="{{ 'theme.js' | asset_url }}" as="script">
   <link rel="preload" href="{{ 'lazysizes.js' | asset_url }}" as="script">
+  <!-- <link rel="preload" href="{{ 'custom-styles.css' | asset_url }}" as="style"> -->
 
   {%- if canonical_url != blank  -%}
     <link rel="canonical" href="{{ canonical_url }}">
