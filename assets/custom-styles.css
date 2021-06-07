@@ -88,3 +88,31 @@
 .grid-header__item {
     flex-basis: 100%;
 }
+
+@media only screen and (min-width: 990px) {
+    .site-header__mobile-nav {
+        padding: 0 30px !important;
+    }
+    .site-footer__item {
+        padding: 25px 40px !important;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .site-footer__item:not(:last-child) {
+        border-right: 1px solid #eee !important;
+    }
+    .site-footer__title {
+        margin: 0 0 15px !important;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    .site-footer__item {
+        margin-bottom: 0 !important;
+    }
+
+    .site-footer__hr {
+        margin: 0px 0 20px 0 !important;
+    }
+}
