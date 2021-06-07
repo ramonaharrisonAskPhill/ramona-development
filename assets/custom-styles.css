@@ -1,3 +1,30 @@
+.site-footer__content {
+    align-items: stretch !important;
+}
+
+.site-footer__item {
+    /* border-bottom: 1px solid #eee !important; */
+    padding: 25px 20px !important;
+}
+
+.site-footer__linklist-item a {
+    font-weight: 300 !important;
+    font-size: 13px !important;
+    line-height: 1.8 !important;
+}
+
+.site-footer__title {
+    -webkit-column-span: all !important;
+    column-span: all  !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    text-transform: uppercase;
+    letter-spacing: 1.5px !important;
+    margin: 0;
+    cursor: pointer;
+    font-family: sans-serif !important;
+}
+
 .search-header {
     color: #000;
     display: inline-block;
