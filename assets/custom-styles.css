@@ -1,3 +1,15 @@
+/* :root {
+    --color-button-primary-focus: #c6c6c6 !important;
+} */
+
+.mega-subtitle, .mega-title {
+    text-shadow: none;
+}
+
+.mega-subtitle, .mega-title {
+    text-shadow: none !important;
+}
+
 .btn {
     transition: all .3s ease-out !important;
 }
@@ -17,6 +29,64 @@
     background-color: #c6c6c6 !important;
     color: #000 !important;
     border: 2px solid transparent !important;
+}
+
+.site-header {
+    padding: 15px 0 !important;
+}
+
+.site-nav {
+    font-size: 13px;
+    font-weight: 500;
+    background-color: #c6c6c6;
+    margin: 0 !important;
+}
+
+.site-nav--centered {
+    padding-bottom: 0 !important;
+}
+
+.site-nav a {
+    padding: 12px 22px !important;
+    font-weight: bold !important;
+}
+
+.site-nav--active:last-child a {
+    color: #c9310c !important;
+}
+
+.site-nav__link {
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.site-nav__label {
+    border-bottom: 0 !important;
+}
+
+.section-header {
+    margin-bottom: 50px !important;
+}
+
+.section-header > h1, .section-header > h2 {
+    font-size: 36px !important;
+    text-transform: initial !important;
+    margin-bottom: 25px;
+    letter-spacing: initial !important;
+    line-height: 46.8px !important;
+}
+
+.section-header > h1:after, .section-header > h2:after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 1px;
+    margin: 15px auto 0;
+    background-color: #000;
+}
+
+.featured-products .btn {
+    min-width: 225px;
 }
 
 .site-footer__content {
@@ -87,6 +157,20 @@
 
 .grid-header__item {
     flex-basis: 100%;
+}
+
+.grid-view-item__title {
+    font-size: 13px !important;
+    line-height: 18px !important;
+    margin: 8px 0 0 !important;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-weight: 300 !important;
+    text-align: center;
+}
+
+.price {
+    align-items: center !important;
 }
 
 @media only screen and (min-width: 990px) {
