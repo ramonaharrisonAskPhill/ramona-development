@@ -18,7 +18,7 @@
   {%- assign base_font_bold_italic = base_font_bold | font_modify: 'style', 'italic' -%}
 
   <link rel="preload" href="{{ 'theme.css' | asset_url }}" as="style">
-  {{ 'custom-font.css.liquid' | asset_url | stylesheet_tag }}
+  {{ 'custom-fonts.css.liquid' | asset_url | stylesheet_tag }}
   {{ 'custom-styles.css' | asset_url | stylesheet_tag }}
   <link rel="preload" as="font" href="{{ header_font | font_url }}" type="font/woff2" crossorigin>
   <link rel="preload" as="font" href="{{ base_font | font_url }}" type="font/woff2" crossorigin>
